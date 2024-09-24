@@ -22,10 +22,6 @@ app.get('/app2', (req, res) => {
   res.send('Hello this App 2!')
 });
 
-app.get('/yaz', (req, res) => {
-  res.send('Hello this App yaz!')
-});
-
 app.get('/yazid', (req, res) => {
   res.send('Ini jalan!')
 });
