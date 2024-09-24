@@ -31,18 +31,10 @@ app.get('/yazid', (req, res) => {
 });
 
 app.get('/users', (req, res, next) => {
-  const sql = "SELECT * FROM tb_data ORDER BY id DESC";
-  
-  connection.query(sql, (error, results, fields) => {
-    if (error) {
-      // Tangani error jika ada
-      console.error("Error executing query:", error);
-      return res.status(500).send("An error occurred while fetching users");
-    }
-    
-    // Kirim hasil query sebagai response
-    res.status(200).json(results);
-  });
+  const sql = "SELECT * FROM tb_data ORDER BY id desc"
+  connection.query(sql,(fields) => {
+    res.send(fields)
+  })
 });
 
 app.listen(process.env.APP_PORT, () => {
