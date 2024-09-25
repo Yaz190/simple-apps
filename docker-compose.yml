@@ -5,7 +5,7 @@ services:
     build: ./apps
     restart: always
     links:
-      - db
+     - db
     ports:
       - "3000"
     volumes:
